@@ -1,0 +1,231 @@
+/* ==========================================================================
+   ANIMATIONS.CSS - Green Forest Frieren Anime Atmospheric Dynamics
+   Swaying canopy, falling leaves, glowing fireflies, and quiet forest magic.
+   ========================================================================== */
+
+/* 1. SLOWLY SWAYING FOREST CANOPY */
+@keyframes canopySwayLeft {
+    0% {
+        transform: rotate(0deg) translate3d(0, 0, 0);
+    }
+    50% {
+        transform: rotate(2.5deg) translate3d(8px, 4px, 0);
+    }
+    100% {
+        transform: rotate(0deg) translate3d(0, 0, 0);
+    }
+}
+
+@keyframes canopySwayRight {
+    0% {
+        transform: rotate(0deg) translate3d(0, 0, 0);
+    }
+    50% {
+        transform: rotate(-2.5deg) translate3d(-8px, 4px, 0);
+    }
+    100% {
+        transform: rotate(0deg) translate3d(0, 0, 0);
+    }
+}
+
+.canopy-left {
+    animation: canopySwayLeft 10s ease-in-out infinite;
+    will-change: transform;
+}
+
+.canopy-right {
+    animation: canopySwayRight 12s ease-in-out infinite;
+    will-change: transform;
+}
+
+/* 2. SOFT SUNLIGHT RAYS PULSE */
+@keyframes rayGlow {
+    0%, 100% {
+        opacity: 0.12;
+    }
+    50% {
+        opacity: 0.24;
+    }
+}
+
+.sunlight-ray {
+    animation: rayGlow 7s ease-in-out infinite;
+    will-change: opacity;
+}
+
+.ray-2 {
+    animation-delay: 2.5s;
+}
+
+.ray-3 {
+    animation-delay: 4.5s;
+}
+
+/* 3. FALLING FOREST LEAVES (MAX 12 LEAVES, 10-14 SECONDS, SLOW & GENTLE) */
+@keyframes leafFall {
+    0% {
+        opacity: 0;
+        transform: translate3d(0, -30px, 0) rotate(0deg) scale(0.7);
+    }
+    15% {
+        opacity: 0.85;
+    }
+    85% {
+        opacity: 0.85;
+    }
+    100% {
+        opacity: 0;
+        transform: translate3d(110px, 104vh, 0) rotate(380deg) scale(0.95);
+    }
+}
+
+@keyframes leafFlutter {
+    0%, 100% {
+        margin-left: 0;
+    }
+    50% {
+        margin-left: 45px;
+    }
+}
+
+.falling-leaf {
+    position: fixed;
+    top: -30px;
+    pointer-events: none;
+    z-index: 100;
+    border-radius: 65% 0 65% 65%;
+    filter: drop-shadow(0 2px 4px rgba(20, 52, 43, 0.2));
+    animation-name: leafFall, leafFlutter;
+    animation-timing-function: linear, ease-in-out;
+    animation-iteration-count: infinite, infinite;
+}
+
+.falling-leaf.leaf-green {
+    background: linear-gradient(135deg, #74A57F 0%, #2D6A4F 100%);
+    opacity: 0.78;
+}
+
+.falling-leaf.leaf-light {
+    background: linear-gradient(135deg, #B7E4C7 0%, #74A57F 100%);
+    opacity: 0.82;
+}
+
+.falling-leaf.leaf-gold {
+    background: linear-gradient(135deg, #FDE8A8 0%, #E9C46A 100%);
+    opacity: 0.75;
+}
+
+.falling-leaf.leaf-sage {
+    background: linear-gradient(135deg, #A4C6AB 0%, #527A5E 100%);
+    opacity: 0.8;
+}
+
+/* 4. GLOWING FOREST FIREFLIES IN FOOTER */
+@keyframes fireflyFloat {
+    0%, 100% {
+        transform: translate3d(0, 0, 0) scale(0.8);
+        opacity: 0.3;
+    }
+    50% {
+        transform: translate3d(12px, -18px, 0) scale(1.1);
+        opacity: 0.95;
+        filter: drop-shadow(0 0 8px rgba(183, 228, 199, 0.9));
+    }
+}
+
+.firefly-dot {
+    position: absolute;
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: #E9C46A;
+    pointer-events: none;
+    animation: fireflyFloat 3.5s ease-in-out infinite;
+    box-shadow: 0 0 8px #B7E4C7;
+}
+
+/* 5. ROTATING GREEN MAGIC CIRCLE */
+@keyframes magicCircleRotate {
+    0% {
+        transform: translate(-50%, -50%) rotate(0deg);
+    }
+    100% {
+        transform: translate(-50%, -50%) rotate(360deg);
+    }
+}
+
+.magic-circle-svg-wrap svg {
+    animation: magicCircleRotate 55s linear infinite;
+    will-change: transform;
+}
+
+/* 6. GLOWING MOSS VINE TRAIL */
+@keyframes mossTrailGlow {
+    0%, 100% {
+        opacity: 0.7;
+        box-shadow: 0 0 8px rgba(45, 106, 79, 0.45);
+    }
+    50% {
+        opacity: 1;
+        box-shadow: 0 0 16px rgba(116, 165, 127, 0.85);
+    }
+}
+
+.timeline-trail-line {
+    animation: mossTrailGlow 3s ease-in-out infinite;
+}
+
+/* 7. SCROLL FADE-IN & SLIDE FOR TIMELINE MILESTONES */
+.fade-in-on-scroll {
+    opacity: 0;
+    transform: translateY(22px);
+    transition: opacity 0.75s cubic-bezier(0.16, 1, 0.3, 1), transform 0.75s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.fade-in-on-scroll.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* 8. SCROLL-DOWN INDICATOR GENTLE BOUNCE */
+@keyframes scrollBounce {
+    0%, 20%, 50%, 80%, 100% {
+        transform: translateY(0);
+    }
+    40% {
+        transform: translateY(7px);
+    }
+    60% {
+        transform: translateY(3px);
+    }
+}
+
+.scroll-arrow {
+    display: inline-block;
+    animation: scrollBounce 2.2s infinite;
+}
+
+/* 9. REDUCED MOTION PREFERENCE (ACCESSIBILITY) */
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
+
+    .falling-leaf,
+    .firefly-dot,
+    .canopy-left,
+    .canopy-right,
+    .sunlight-ray {
+        display: none !important;
+    }
+
+    .fade-in-on-scroll {
+        opacity: 1 !important;
+        transform: none !important;
+    }
+}

@@ -1,0 +1,1312 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Portfolio of Melchor Y. Dimco — Full Stack Developer based in the Philippines, crafting clean interfaces, modular backends, and steady web experiences in a calm green forest aesthetic.">
+    <title>Melchor Y. Dimco | Full Stack Developer</title>
+
+    <!-- Google Fonts: Cinzel (Storybook Serif) & Outfit (Clean Modern Sans) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700;800;900&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- CSS Cascades -->
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/animations.css">
+</head>
+<body>
+
+    <!-- Moss-Green Journey Progress Bar (Top of Viewport) -->
+    <div id="scroll-progress-bar" aria-hidden="true"></div>
+
+    <!-- 1. FIXED HEADER / NAVIGATION (72px, Frosted Cream Glass) -->
+    <header class="site-header" id="site-header">
+        <div class="header-container">
+            <!-- Monogram & Wordmark -->
+            <a href="#hero" class="header-logo" aria-label="Melchor Y. Dimco Home">
+                <span class="logo-monogram">MD</span>
+                <span>MELCHOR Y. DIMCO</span>
+            </a>
+
+            <!-- Desktop Nav Menu -->
+            <nav aria-label="Main Navigation">
+                <ul class="nav-menu" id="nav-menu">
+                    <li><a href="#hero" class="nav-link active">Home</a></li>
+                    <li><a href="#about" class="nav-link">About</a></li>
+                    <li><a href="#skills" class="nav-link">Skills</a></li>
+                    <li><a href="#projects" class="nav-link">Projects</a></li>
+                    <li><a href="#journey" class="nav-link">Journey</a></li>
+                    <li><a href="#contact" class="nav-link">Contact</a></li>
+                </ul>
+            </nav>
+
+            <!-- Header Right Actions -->
+            <div class="header-actions">
+                <a href="#contact" class="btn-contact-nav">Contact Me</a>
+                <button class="hamburger-toggle" id="hamburger-toggle" type="button" aria-label="Toggle navigation menu" aria-expanded="false">☰</button>
+            </div>
+        </div>
+
+        <!-- Mobile Slide-In Panel -->
+        <div class="mobile-nav-panel" id="mobile-nav-panel" aria-label="Mobile Navigation">
+            <a href="#hero" class="nav-link active">Home</a>
+            <a href="#about" class="nav-link">About</a>
+            <a href="#skills" class="nav-link">Skills</a>
+            <a href="#projects" class="nav-link">Projects</a>
+            <a href="#journey" class="nav-link">Journey</a>
+            <a href="#contact" class="nav-link">Contact</a>
+            <a href="#contact" class="btn-primary" style="margin-top: 8px; width: 100%; text-align: center;">Contact Me</a>
+        </div>
+    </header>
+
+    <!-- MAIN CONTENT -->
+    <main>
+
+        <!-- 2. SECTION 1: HERO SECTION (Sunlit Forest Entrance) -->
+        <section id="hero">
+            <!-- Layered Forest Canopy & Sunlight Rays -->
+            <div class="hero-forest-backdrop" aria-hidden="true">
+                <!-- Soft Sunlight Rays -->
+                <div class="sunlight-ray ray-1"></div>
+                <div class="sunlight-ray ray-2"></div>
+                <div class="sunlight-ray ray-3"></div>
+
+                <!-- Forest Canopy Leaves Top Left & Right -->
+                <svg class="canopy-svg canopy-left" viewBox="0 0 400 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M-20,-20 C60,40 120,30 180,90 C220,130 160,180 100,160 C50,145 30,190 -20,200 Z" fill="#1B4332"/>
+                    <path d="M0,0 C90,20 160,60 220,120 C180,150 120,130 60,110 C20,95 10,130 -20,140 Z" fill="#2D6A4F" opacity="0.6"/>
+                    <path d="M50,-10 C120,15 190,40 260,85 C220,110 170,95 110,80 Z" fill="#74A57F" opacity="0.45"/>
+                </svg>
+
+                <svg class="canopy-svg canopy-right" viewBox="0 0 400 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M420,-20 C340,40 280,30 220,90 C180,130 240,180 300,160 C350,145 370,190 420,200 Z" fill="#1B4332"/>
+                    <path d="M400,0 C310,20 240,60 180,120 C220,150 280,130 340,110 C380,95 390,130 420,140 Z" fill="#2D6A4F" opacity="0.6"/>
+                    <path d="M350,-10 C280,15 210,40 140,85 C180,110 230,95 290,80 Z" fill="#74A57F" opacity="0.45"/>
+                </svg>
+            </div>
+
+            <!-- Falling Forest Leaves Container (Max 12 Leaves) -->
+            <div id="falling-leaves-container" aria-hidden="true"></div>
+
+            <div class="section-container">
+                <div class="hero-grid">
+                    <!-- Text Column -->
+                    <div class="hero-text-col">
+                        <h1 class="hero-title">Melchor Y. Dimco</h1>
+                        <p class="hero-role">Full Stack Developer</p>
+                        <p class="hero-intro">Crafting interactive web and mobile applications with clean architecture, responsive layouts, and elegant modern aesthetics inspired by quiet forest journeys and steady progress.</p>
+
+                        <div class="hero-btn-group">
+                            <a href="#projects" class="btn-primary">View My Projects</a>
+                            <a href="#contact" class="btn-secondary">Contact Me</a>
+                        </div>
+
+                        <!-- Stats Strip (Real Data Only - Zero Percentages) -->
+                        <div class="hero-stats-strip">
+                            <div class="stat-item">
+                                <span class="stat-number">19<span>+</span></span>
+                                <span class="stat-label">Public Repos</span>
+                            </div>
+                            <div class="stat-item">
+                                <span class="stat-number">UM</span>
+                                <span class="stat-label">Univ of Mindanao</span>
+                            </div>
+                            <div class="stat-item">
+                                <span class="stat-number">7<span>+</span></span>
+                                <span class="stat-label">Core Tools</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Photo Column with Faint Glowing Green Magic Circle -->
+                    <div class="hero-photo-col">
+                        <!-- Faint Glowing Green Magic Circle SVG -->
+                        <div class="magic-circle-svg-wrap" aria-hidden="true">
+                            <svg viewBox="0 0 370 370" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <circle cx="185" cy="185" r="172" stroke="#2D6A4F" stroke-width="1.2" stroke-dasharray="6 4" opacity="0.45"/>
+                                <circle cx="185" cy="185" r="156" stroke="#74A57F" stroke-width="1.2" opacity="0.4"/>
+                                <circle cx="185" cy="185" r="140" stroke="#B7E4C7" stroke-width="1.5" stroke-dasharray="14 6" opacity="0.5"/>
+                                <polygon points="185,38 224,146 332,185 224,224 185,332 146,224 38,185 146,146" stroke="#2D6A4F" stroke-width="0.9" opacity="0.35"/>
+                                <polygon points="185,50 212,158 320,185 212,212 185,320 158,212 50,185 158,158" stroke="#74A57F" stroke-width="0.9" transform="rotate(45 185 185)" opacity="0.3"/>
+                                <circle cx="185" cy="185" r="120" stroke="#2D6A4F" stroke-width="1" opacity="0.4"/>
+                            </svg>
+                        </div>
+
+                        <!-- 24px Rounded Gold & Moss Frame with Corner Ferns -->
+                        <div class="hero-photo-frame">
+                            <img src="assets/images/Himmel.jpg" alt="Melchor Y. Dimco - Full Stack Developer Portrait" class="hero-img">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Soft Animated Scroll-Down Indicator -->
+            <a href="#about" class="hero-scroll-indicator" aria-label="Scroll to About section">
+                <span>SCROLL DOWN</span>
+                <span class="scroll-arrow" aria-hidden="true">↓</span>
+            </a>
+        </section>
+
+        <!-- Fern Divider -->
+        <div class="section-fern-divider" aria-hidden="true">
+            <div class="divider-line"></div>
+            <div class="divider-leaf">❀ 🌿 ❀</div>
+            <div class="divider-line"></div>
+        </div>
+
+        <!-- 3. SECTION 2: ABOUT SECTION (Quiet Forest Clearing) -->
+        <section id="about">
+            <div class="section-container">
+                <div class="section-header">
+                    <h2 class="section-heading">About Me</h2>
+                    <div class="section-heading-underline"><span class="section-heading-leaf">🌿</span></div>
+                    <p class="section-lead">A quiet clearing on the path — engineering philosophy, developer focus, and everyday tools.</p>
+                </div>
+
+                <!-- Thematic Storybook Grimoire Card -->
+                <div class="about-card-centered about-grimoire-card">
+                    <!-- Faint Rotating Magic Circle Watermark in Background -->
+                    <div class="about-magic-watermark" aria-hidden="true">
+                        <svg viewBox="0 0 370 370" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <circle cx="185" cy="185" r="175" stroke="#2D6A4F" stroke-width="1.2" stroke-dasharray="8 6" opacity="0.6"/>
+                            <circle cx="185" cy="185" r="158" stroke="#74A57F" stroke-width="1" opacity="0.5"/>
+                            <circle cx="185" cy="185" r="140" stroke="#B7E4C7" stroke-width="1.2" stroke-dasharray="14 6" opacity="0.5"/>
+                            <polygon points="185,38 224,146 332,185 224,224 185,332 146,224 38,185 146,146" stroke="#2D6A4F" stroke-width="0.9" opacity="0.4"/>
+                            <polygon points="185,50 212,158 320,185 212,212 185,320 158,212 50,185 158,158" stroke="#74A57F" stroke-width="0.9" transform="rotate(45 185 185)" opacity="0.35"/>
+                            <circle cx="185" cy="185" r="120" stroke="#2D6A4F" stroke-width="1" opacity="0.4"/>
+                        </svg>
+                    </div>
+
+                    <!-- Four Ornate Elven Grimoire Corner Brackets -->
+                    <div class="grimoire-corner grimoire-corner-tl" aria-hidden="true">
+                        <svg viewBox="0 0 44 44" fill="none"><path d="M2,42 L2,14 C2,7.37 7.37,2 14,2 L42,2" stroke="#2D6A4F" stroke-width="2.5"/><path d="M7,42 L7,16 C7,11.03 11.03,7 16,7 L42,7" stroke="#D4A359" stroke-width="1.2"/><circle cx="14" cy="14" r="3.5" fill="#D4A359"/><path d="M14,6 C14,14 6,14 6,14" stroke="#74A57F" stroke-width="1"/></svg>
+                    </div>
+                    <div class="grimoire-corner grimoire-corner-tr" aria-hidden="true">
+                        <svg viewBox="0 0 44 44" fill="none"><path d="M42,42 L42,14 C42,7.37 36.63,2 30,2 L2,2" stroke="#2D6A4F" stroke-width="2.5"/><path d="M37,42 L37,16 C37,11.03 32.97,7 28,7 L2,7" stroke="#D4A359" stroke-width="1.2"/><circle cx="30" cy="14" r="3.5" fill="#D4A359"/><path d="M30,6 C30,14 38,14 38,14" stroke="#74A57F" stroke-width="1"/></svg>
+                    </div>
+                    <div class="grimoire-corner grimoire-corner-bl" aria-hidden="true">
+                        <svg viewBox="0 0 44 44" fill="none"><path d="M2,2 L2,30 C2,36.63 7.37,42 14,42 L42,42" stroke="#2D6A4F" stroke-width="2.5"/><path d="M7,2 L7,28 C7,32.97 11.03,37 16,37 L42,37" stroke="#D4A359" stroke-width="1.2"/><circle cx="14" cy="30" r="3.5" fill="#D4A359"/><path d="M14,38 C14,30 6,30 6,30" stroke="#74A57F" stroke-width="1"/></svg>
+                    </div>
+                    <div class="grimoire-corner grimoire-corner-br" aria-hidden="true">
+                        <svg viewBox="0 0 44 44" fill="none"><path d="M42,2 L42,30 C42,36.63 36.63,42 30,42 L2,42" stroke="#2D6A4F" stroke-width="2.5"/><path d="M37,2 L37,28 C37,32.97 32.97,37 28,37 L2,37" stroke="#D4A359" stroke-width="1.2"/><circle cx="30" cy="30" r="3.5" fill="#D4A359"/><path d="M30,38 C30,30 38,30 38,30" stroke="#74A57F" stroke-width="1"/></svg>
+                    </div>
+
+                    <!-- Centered Portrait & Identity Badge -->
+                    <div class="about-avatar-wrap">
+                        <div class="about-photo-frame">
+                            <img src="assets/images/Himmel.jpg" alt="Melchor Y. Dimco Portrait" class="about-img" loading="lazy">
+                        </div>
+                        <h3 class="about-name-title">Melchor Y. Dimco</h3>
+                        <p class="about-role-sub">
+                            <span class="about-role-leaf">🌿</span>
+                            <span>Full Stack Developer • University of Mindanao</span>
+                            <span class="about-role-leaf">🌿</span>
+                        </p>
+                    </div>
+
+                    <!-- Frieren Storybook Motto Plaque (Antique Parchment Scroll Banner) -->
+                    <div class="about-motto-plaque">
+                        <div class="plaque-pin plaque-pin-left" aria-hidden="true">✦</div>
+                        <div class="plaque-content">
+                            <span class="plaque-quote-mark">“</span>
+                            <span class="plaque-text">Not in a rush — just keep walking, keep learning.</span>
+                            <span class="plaque-quote-mark">”</span>
+                        </div>
+                        <div class="plaque-pin plaque-pin-right" aria-hidden="true">✦</div>
+                    </div>
+
+                    <!-- Thematic Interactive Navigation Tabs (Ribbon Bookmarks) -->
+                    <div class="about-grimoire-tabs" role="tablist" aria-label="About Me Chapters">
+                        <button type="button" class="about-tab-btn active" role="tab" aria-selected="true" data-tab="all" id="tab-btn-all">
+                            <span class="tab-icon">✦</span>
+                            <span>Full Chronicle</span>
+                        </button>
+                        <button type="button" class="about-tab-btn" role="tab" aria-selected="false" data-tab="chronicle" id="tab-btn-chronicle">
+                            <span class="tab-icon">📜</span>
+                            <span>Bio &amp; Philosophy</span>
+                        </button>
+                        <button type="button" class="about-tab-btn" role="tab" aria-selected="false" data-tab="ledger" id="tab-btn-ledger">
+                            <span class="tab-icon">🗺️</span>
+                            <span>Traveler's Ledger</span>
+                        </button>
+                        <button type="button" class="about-tab-btn" role="tab" aria-selected="false" data-tab="equipment" id="tab-btn-equipment">
+                            <span class="tab-icon">🎒</span>
+                            <span>Everyday Grimoire</span>
+                        </button>
+                    </div>
+
+                    <!-- TAB CONTENT PANELS CONTAINER -->
+                    <div class="about-panels-wrap">
+
+                        <!-- CHAPTER I: BIO & JOURNEY PHILOSOPHY -->
+                        <div class="about-tab-panel is-active" id="panel-chronicle" data-panel="chronicle">
+                            <div class="about-chapter-heading">
+                                <span class="chapter-num">Chapter I</span>
+                                <h4 class="chapter-title">The Path of Steady Progress</h4>
+                                <div class="chapter-divider"><span class="chapter-leaf">🌿</span></div>
+                            </div>
+
+                            <div class="about-bio-wrap">
+                                <p class="about-bio-p">Welcome to my digital clearing! I am a Full Stack Developer from the Philippines currently studying at the University of Mindanao. My focus centers around clean interfaces, modular architectures, and steady, deliberate progress.</p>
+                                <p class="about-bio-p">I believe a journey isn't measured by how fast you arrive, but by what you notice along the way — the light through the trees, the people you meet, and the small things you finally get right. Whether engineering interactive Flutter applications or crafting responsive web experiences, I build thoughtfully with steady momentum.</p>
+                            </div>
+
+                            <!-- 3 Frieren Journey Principles Cards -->
+                            <div class="journey-principles-grid">
+                                <div class="principle-card">
+                                    <div class="principle-icon-wrap">🌿</div>
+                                    <h5 class="principle-title">Steady Footing</h5>
+                                    <p class="principle-desc">Quality code is forged one deliberate step at a time, treasuring every small milestone rather than rushing.</p>
+                                </div>
+                                <div class="principle-card">
+                                    <div class="principle-icon-wrap">🏛️</div>
+                                    <h5 class="principle-title">Modular Craft</h5>
+                                    <p class="principle-desc">Designing interfaces that are readable, accessible, and structured with clean patterns that stand the test of time.</p>
+                                </div>
+                                <div class="principle-card">
+                                    <div class="principle-icon-wrap">✨</div>
+                                    <h5 class="principle-title">Quiet Curiosity</h5>
+                                    <p class="principle-desc">Continuously learning new crafts — from mastering web and Flutter fundamentals to expanding into Python.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- CHAPTER II: THE TRAVELER'S LEDGER (6 Parchment Info Cards) -->
+                        <div class="about-tab-panel is-active" id="panel-ledger" data-panel="ledger">
+                            <div class="about-chapter-heading">
+                                <span class="chapter-num">Chapter II</span>
+                                <h4 class="chapter-title">The Traveler's Ledger</h4>
+                                <div class="chapter-divider"><span class="chapter-leaf">📜</span></div>
+                            </div>
+
+                            <div class="about-info-grid">
+                                <div class="info-item">
+                                    <div class="info-item-header">
+                                        <span class="info-item-icon">👤</span>
+                                        <span class="info-label">Name</span>
+                                    </div>
+                                    <span class="info-value">Melchor Y. Dimco</span>
+                                </div>
+                                <div class="info-item">
+                                    <div class="info-item-header">
+                                        <span class="info-item-icon">🌿</span>
+                                        <span class="info-label">Role</span>
+                                    </div>
+                                    <span class="info-value">Full Stack Developer</span>
+                                </div>
+                                <div class="info-item">
+                                    <div class="info-item-header">
+                                        <span class="info-item-icon">🧭</span>
+                                        <span class="info-label">Location</span>
+                                    </div>
+                                    <span class="info-value">Philippines</span>
+                                </div>
+                                <div class="info-item">
+                                    <div class="info-item-header">
+                                        <span class="info-item-icon">🏛️</span>
+                                        <span class="info-label">Currently At</span>
+                                    </div>
+                                    <span class="info-value">University of Mindanao</span>
+                                </div>
+                                <div class="info-item">
+                                    <div class="info-item-header">
+                                        <span class="info-item-icon">📜</span>
+                                        <span class="info-label">Currently Learning</span>
+                                    </div>
+                                    <span class="info-value">Python</span>
+                                </div>
+                                <div class="info-item">
+                                    <div class="info-item-header">
+                                        <span class="info-item-icon">🎯</span>
+                                        <span class="info-label">Focus</span>
+                                    </div>
+                                    <span class="info-value">Clean interfaces, steady progress</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- CHAPTER III: EVERYDAY GRIMOIRE & TOOLS (Real Data Tools Showcase) -->
+                        <div class="about-tab-panel is-active" id="panel-equipment" data-panel="equipment">
+                            <div class="about-chapter-heading">
+                                <span class="chapter-num">Chapter III</span>
+                                <h4 class="chapter-title">Everyday Grimoire &amp; Field Equipment</h4>
+                                <div class="chapter-divider"><span class="chapter-leaf">🎒</span></div>
+                            </div>
+                            <p class="about-panel-subtitle">The reliable instruments, frameworks, and active studies carried throughout the journey.</p>
+
+                            <div class="grimoire-tools-grid">
+                                <div class="grimoire-tool-card">
+                                    <div class="tool-card-icon">💻</div>
+                                    <div class="tool-card-body">
+                                        <span class="tool-card-name">VS Code</span>
+                                        <span class="tool-card-role">Primary Development Grimoire</span>
+                                    </div>
+                                </div>
+                                <div class="grimoire-tool-card">
+                                    <div class="tool-card-icon">🐙</div>
+                                    <div class="tool-card-body">
+                                        <span class="tool-card-name">GitHub</span>
+                                        <span class="tool-card-role">Repository Archive &amp; Version Trail</span>
+                                    </div>
+                                </div>
+                                <div class="grimoire-tool-card">
+                                    <div class="tool-card-icon">🎯</div>
+                                    <div class="tool-card-body">
+                                        <span class="tool-card-name">Dart &amp; Flutter</span>
+                                        <span class="tool-card-role">Cross-Platform UI &amp; Mobile Magic</span>
+                                    </div>
+                                </div>
+                                <div class="grimoire-tool-card">
+                                    <div class="tool-card-icon">🌐</div>
+                                    <div class="tool-card-body">
+                                        <span class="tool-card-name">HTML5 &amp; CSS3</span>
+                                        <span class="tool-card-role">Semantic Structure &amp; Responsive Layout</span>
+                                    </div>
+                                </div>
+                                <div class="grimoire-tool-card">
+                                    <div class="tool-card-icon">🎨</div>
+                                    <div class="tool-card-body">
+                                        <span class="tool-card-name">Figma</span>
+                                        <span class="tool-card-role">Interface Blueprints &amp; Prototyping</span>
+                                    </div>
+                                </div>
+                                <div class="grimoire-tool-card">
+                                    <div class="tool-card-icon">🔥</div>
+                                    <div class="tool-card-body">
+                                        <span class="tool-card-name">Firebase</span>
+                                        <span class="tool-card-role">Cloud Backend &amp; Realtime Data</span>
+                                    </div>
+                                </div>
+                                <div class="grimoire-tool-card tool-card-learning">
+                                    <div class="tool-card-icon">🐍</div>
+                                    <div class="tool-card-body">
+                                        <span class="tool-card-name">Python <span class="tool-badge-status">In Study</span></span>
+                                        <span class="tool-card-role">Active Language Grimoire in Progress</span>
+                                    </div>
+                                </div>
+                                <div class="grimoire-tool-card">
+                                    <div class="tool-card-icon">🎵</div>
+                                    <div class="tool-card-body">
+                                        <span class="tool-card-name">Web Audio API</span>
+                                        <span class="tool-card-role">Interactive Soundscapes &amp; Micro-SFX</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div> <!-- End about-panels-wrap -->
+
+                    <!-- Interactive Mana Breeze / Forest Chime Action Footer -->
+                    <div class="about-card-footer">
+                        <button type="button" class="btn-mana-breeze" id="btn-mana-breeze" aria-label="Cast Forest Breeze">
+                            <span class="breeze-icon">🍃</span>
+                            <span>Cast Forest Breeze</span>
+                            <span class="breeze-sparkle">✨</span>
+                        </button>
+                    </div>
+
+                </div> <!-- End about-card-centered -->
+            </div>
+        </section>
+
+        <!-- Fern Divider -->
+        <div class="section-fern-divider" aria-hidden="true">
+            <div class="divider-line"></div>
+            <div class="divider-leaf">❀ 🌿 ❀</div>
+            <div class="divider-line"></div>
+        </div>
+
+        <!-- 4. SECTION 3: SKILLS SECTION (Forest Glade Toolkit) -->
+        <section id="skills">
+            <div class="section-container">
+                <div class="section-header">
+                    <h2 class="section-heading">Skills and Proficiencies</h2>
+                    <div class="section-heading-underline"><span class="section-heading-leaf">🌿</span></div>
+                    <p class="section-lead">Technologies, frameworks, and architecture principles refined through steady practice on the journey.</p>
+                </div>
+
+                <div class="skills-grid">
+                    <!-- Category 1: Core Technologies -->
+                    <div class="skill-category-card">
+                        <div class="category-header">
+                            <span class="category-icon" aria-hidden="true">🌿</span>
+                            <h3 class="category-title">Core Technologies</h3>
+                        </div>
+
+                        <div class="skill-list">
+                            <!-- HTML / CSS -->
+                            <div class="skill-item">
+                                <div class="skill-meta">
+                                    <span>HTML &amp; CSS</span>
+                                    <span class="skill-level-tag">Proficient</span>
+                                </div>
+                                <div class="skill-bar-track">
+                                    <div class="skill-bar-fill" data-width="90%"></div>
+                                </div>
+                            </div>
+
+                            <!-- Dart / Flutter -->
+                            <div class="skill-item">
+                                <div class="skill-meta">
+                                    <span>Dart &amp; Flutter</span>
+                                    <span class="skill-level-tag">Core Focus</span>
+                                </div>
+                                <div class="skill-bar-track">
+                                    <div class="skill-bar-fill" data-width="85%"></div>
+                                </div>
+                            </div>
+
+                            <!-- JavaScript -->
+                            <div class="skill-item">
+                                <div class="skill-meta">
+                                    <span>JavaScript ES6+</span>
+                                    <span class="skill-level-tag">Skilled</span>
+                                </div>
+                                <div class="skill-bar-track">
+                                    <div class="skill-bar-fill" data-width="80%"></div>
+                                </div>
+                            </div>
+
+                            <!-- Responsive Design -->
+                            <div class="skill-item">
+                                <div class="skill-meta">
+                                    <span>Responsive Design</span>
+                                    <span class="skill-level-tag">Proficient</span>
+                                </div>
+                                <div class="skill-bar-track">
+                                    <div class="skill-bar-fill" data-width="88%"></div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="skill-chips">
+                            <span class="skill-chip">Dart</span>
+                            <span class="skill-chip">Flutter</span>
+                            <span class="skill-chip">HTML5</span>
+                            <span class="skill-chip">CSS3</span>
+                            <span class="skill-chip">Flexbox / Grid</span>
+                        </div>
+                    </div>
+
+                    <!-- Category 2: Tools & Backend -->
+                    <div class="skill-category-card">
+                        <div class="category-header">
+                            <span class="category-icon" aria-hidden="true">⚒️</span>
+                            <h3 class="category-title">Tools &amp; Workflow</h3>
+                        </div>
+
+                        <div class="skill-list">
+                            <!-- Git / Workflow -->
+                            <div class="skill-item">
+                                <div class="skill-meta">
+                                    <span>Git &amp; GitHub</span>
+                                    <span class="skill-level-tag">Daily Workflow</span>
+                                </div>
+                                <div class="skill-bar-track">
+                                    <div class="skill-bar-fill" data-width="85%"></div>
+                                </div>
+                            </div>
+
+                            <!-- Web Audio / UI SFX -->
+                            <div class="skill-item">
+                                <div class="skill-meta">
+                                    <span>Web Audio / UI SFX</span>
+                                    <span class="skill-level-tag">Specialized</span>
+                                </div>
+                                <div class="skill-bar-track">
+                                    <div class="skill-bar-fill" data-width="82%"></div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="skill-chips">
+                            <span class="skill-chip">VS Code</span>
+                            <span class="skill-chip">GitHub</span>
+                            <span class="skill-chip">Firebase</span>
+                            <span class="skill-chip">DevTools</span>
+                            <span class="skill-chip">Web Audio API</span>
+                        </div>
+                    </div>
+
+                    <!-- Category 3: Design & Active Learning -->
+                    <div class="skill-category-card">
+                        <div class="category-header">
+                            <span class="category-icon" aria-hidden="true">🛡️</span>
+                            <h3 class="category-title">Design &amp; Growth</h3>
+                        </div>
+
+                        <p style="font-size: 0.94rem; color: var(--text-muted); line-height: 1.7; margin-bottom: 16px;">Practicing thoughtful interface design, modular code organization, and currently expanding into Python.</p>
+
+                        <div class="skill-chips">
+                            <span class="skill-chip" style="background: rgba(233, 196, 106, 0.25); border-color: var(--c-sunlight-gold); color: #8A6405; font-weight: 700;">🐍 Python (Learning)</span>
+                            <span class="skill-chip">Figma</span>
+                            <span class="skill-chip">UI Architecture</span>
+                            <span class="skill-chip">Clean Code</span>
+                            <span class="skill-chip">Zero Heavy Dependencies</span>
+                            <span class="skill-chip">UI Accessibility</span>
+                            <span class="skill-chip">High Contrast</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Fern Divider -->
+        <div class="section-fern-divider" aria-hidden="true">
+            <div class="divider-line"></div>
+            <div class="divider-leaf">❀ 🌿 ❀</div>
+            <div class="divider-line"></div>
+        </div>
+
+        <!-- 5. SECTION 4: PROJECTS SECTION - ALL MY WORKS (Flower Meadow Inside Forest) -->
+        <section id="projects">
+            <div class="section-container">
+                <div class="section-header">
+                    <h2 class="section-heading">All My Works</h2>
+                    <div class="section-heading-underline"><span class="section-heading-leaf">🌿</span></div>
+                    <p class="section-lead">A complete showcase of all public projects and repositories from my GitHub — featuring playable prototypes, utility applications, and full-stack systems.</p>
+                </div>
+
+                <!-- Controls: Filter Tabs & Real-Time Search Box -->
+                <div class="projects-controls">
+                    <div class="filter-group" role="tablist" aria-label="Project Categories">
+                        <button class="btn-filter active" data-filter="all" role="tab" aria-selected="true">All Works (19)</button>
+                        <button class="btn-filter" data-filter="featured" role="tab" aria-selected="false">Featured (2)</button>
+                        <button class="btn-filter" data-filter="app" role="tab" aria-selected="false">Apps (4)</button>
+                        <button class="btn-filter" data-filter="web" role="tab" aria-selected="false">Web &amp; Backend (15)</button>
+                    </div>
+
+                    <div class="project-search-wrap">
+                        <span class="search-icon" aria-hidden="true">🔍</span>
+                        <input type="text" id="project-search" class="project-search-input" placeholder="Search projects, stack, or tags..." aria-label="Search projects">
+                    </div>
+                </div>
+
+                <!-- 3-Column Desktop Grid with All 19 Real Projects -->
+                <div class="projects-grid" id="projects-grid">
+
+                    <!-- Featured 1: MWorld -->
+                    <article class="project-card" data-category="app" data-featured="true" data-id="MWorld" tabindex="0">
+                        <div class="project-card-image">
+                            <div class="badge-stack">
+                                <span class="project-badge-pill featured">★ Featured</span>
+                                <span class="project-badge-pill">Recent</span>
+                            </div>
+                            <div class="project-image-placeholder">MWORLD: BRAWL ARENA</div>
+                        </div>
+                        <div class="project-card-body">
+                            <h3 class="project-card-title">MWorld</h3>
+                            <p class="project-card-desc">Mythril World — an indestructible training crucible where mages and warriors unleash spells. Brawl Arena is a 2D top-down brawler prototype with a cozy high-fantasy feel.</p>
+                            <div class="project-tool-tags">
+                                <span class="tool-tag">Flutter</span>
+                                <span class="tool-tag">Dart</span>
+                                <span class="tool-tag">Provider</span>
+                                <span class="tool-tag">Cross-Platform</span>
+                            </div>
+                            <div class="project-card-actions">
+                                <a href="https://github.com/mdimco554902-a11y/MWorld" target="_blank" rel="noopener noreferrer" class="btn-card-link" onclick="event.stopPropagation()">GitHub Repo</a>
+                                <button type="button" class="btn-card-link btn-card-details">View Details</button>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Featured 2: CTrack -->
+                    <article class="project-card" data-category="app" data-featured="true" data-id="CTrack" tabindex="0">
+                        <div class="project-card-image">
+                            <div class="badge-stack">
+                                <span class="project-badge-pill featured">★ Featured</span>
+                                <span class="project-badge-pill">Recent</span>
+                            </div>
+                            <div class="project-image-placeholder">CTRACK: MACRO TRACKER</div>
+                        </div>
+                        <div class="project-card-body">
+                            <h3 class="project-card-title">CTrack</h3>
+                            <p class="project-card-desc">Nutrition &amp; Macro Tracker — intuitive tracker designed to take the guesswork out of daily nutrition. Track calories, scale portions in grams, and balance macros against daily goals.</p>
+                            <div class="project-tool-tags">
+                                <span class="tool-tag">Flutter</span>
+                                <span class="tool-tag">Dart</span>
+                                <span class="tool-tag">Riverpod</span>
+                                <span class="tool-tag">Theme Engine</span>
+                            </div>
+                            <div class="project-card-actions">
+                                <a href="https://github.com/mdimco554902-a11y/CTrack" target="_blank" rel="noopener noreferrer" class="btn-card-link" onclick="event.stopPropagation()">GitHub Repo</a>
+                                <button type="button" class="btn-card-link btn-card-details">View Details</button>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Project 3: ScamShield -->
+                    <article class="project-card" data-category="app" data-id="ScamShield" tabindex="0">
+                        <div class="project-card-image">
+                            <div class="badge-stack">
+                                <span class="project-badge-pill">Mobile App</span>
+                            </div>
+                            <div class="project-image-placeholder">SCAMSHIELD</div>
+                        </div>
+                        <div class="project-card-body">
+                            <h3 class="project-card-title">ScamShield</h3>
+                            <p class="project-card-desc">Security and fraud awareness mobile application built with Flutter &amp; Dart to shield users from malicious online channels and cyber scams.</p>
+                            <div class="project-tool-tags">
+                                <span class="tool-tag">Flutter</span>
+                                <span class="tool-tag">Dart</span>
+                                <span class="tool-tag">Security UI</span>
+                            </div>
+                            <div class="project-card-actions">
+                                <a href="https://github.com/mdimco554902-a11y/ScamShield" target="_blank" rel="noopener noreferrer" class="btn-card-link" onclick="event.stopPropagation()">GitHub Repo</a>
+                                <button type="button" class="btn-card-link btn-card-details">View Details</button>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Project 4: Login-Homepage -->
+                    <article class="project-card" data-category="app" data-id="Login-Homepage" tabindex="0">
+                        <div class="project-card-image">
+                            <div class="badge-stack">
+                                <span class="project-badge-pill">Auth UI</span>
+                            </div>
+                            <div class="project-image-placeholder">LOGIN &amp; HOMEPAGE</div>
+                        </div>
+                        <div class="project-card-body">
+                            <h3 class="project-card-title">Login-Homepage</h3>
+                            <p class="project-card-desc">Clean authentication portal and responsive homepage interface with seamless user flow, input verification, and modern UI components.</p>
+                            <div class="project-tool-tags">
+                                <span class="tool-tag">Flutter</span>
+                                <span class="tool-tag">Dart</span>
+                                <span class="tool-tag">C++</span>
+                            </div>
+                            <div class="project-card-actions">
+                                <a href="https://github.com/mdimco554902-a11y/Login-Homepage" target="_blank" rel="noopener noreferrer" class="btn-card-link" onclick="event.stopPropagation()">GitHub Repo</a>
+                                <button type="button" class="btn-card-link btn-card-details">View Details</button>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Project 5: finance-hub -->
+                    <article class="project-card" data-category="web" data-id="finance-hub" tabindex="0">
+                        <div class="project-card-image">
+                            <div class="badge-stack">
+                                <span class="project-badge-pill">Web App</span>
+                            </div>
+                            <div class="project-image-placeholder">FINANCE HUB</div>
+                        </div>
+                        <div class="project-card-body">
+                            <h3 class="project-card-title">finance-hub</h3>
+                            <p class="project-card-desc">Financial management dashboard and ledger system built with Laravel and Blade templates for managing transactions and assets.</p>
+                            <div class="project-tool-tags">
+                                <span class="tool-tag">PHP</span>
+                                <span class="tool-tag">Laravel</span>
+                                <span class="tool-tag">Blade</span>
+                            </div>
+                            <div class="project-card-actions">
+                                <a href="https://github.com/mdimco554902-a11y/finance-hub" target="_blank" rel="noopener noreferrer" class="btn-card-link" onclick="event.stopPropagation()">GitHub Repo</a>
+                                <button type="button" class="btn-card-link btn-card-details">View Details</button>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Project 6: appointment_db -->
+                    <article class="project-card" data-category="web" data-id="appointment_db" tabindex="0">
+                        <div class="project-card-image">
+                            <div class="badge-stack">
+                                <span class="project-badge-pill">Database UI</span>
+                            </div>
+                            <div class="project-image-placeholder">APPOINTMENT DB</div>
+                        </div>
+                        <div class="project-card-body">
+                            <h3 class="project-card-title">appointment_db</h3>
+                            <p class="project-card-desc">Database-driven appointment booking and scheduling system engineered with Laravel Blade views and relational SQL schema.</p>
+                            <div class="project-tool-tags">
+                                <span class="tool-tag">Laravel</span>
+                                <span class="tool-tag">Blade</span>
+                                <span class="tool-tag">MySQL</span>
+                            </div>
+                            <div class="project-card-actions">
+                                <a href="https://github.com/mdimco554902-a11y/appointment_db" target="_blank" rel="noopener noreferrer" class="btn-card-link" onclick="event.stopPropagation()">GitHub Repo</a>
+                                <button type="button" class="btn-card-link btn-card-details">View Details</button>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Project 7: 2nd-exam -->
+                    <article class="project-card" data-category="web" data-id="2nd-exam" tabindex="0">
+                        <div class="project-card-image">
+                            <div class="badge-stack">
+                                <span class="project-badge-pill">Academic</span>
+                            </div>
+                            <div class="project-image-placeholder">2ND EXAM PROJECT</div>
+                        </div>
+                        <div class="project-card-body">
+                            <h3 class="project-card-title">2nd-exam</h3>
+                            <p class="project-card-desc">Academic midterm examination project at University of Mindanao showcasing full-stack MVC patterns with Laravel.</p>
+                            <div class="project-tool-tags">
+                                <span class="tool-tag">Laravel</span>
+                                <span class="tool-tag">Blade</span>
+                                <span class="tool-tag">PHP</span>
+                            </div>
+                            <div class="project-card-actions">
+                                <a href="https://github.com/mdimco554902-a11y/2nd-exam" target="_blank" rel="noopener noreferrer" class="btn-card-link" onclick="event.stopPropagation()">GitHub Repo</a>
+                                <button type="button" class="btn-card-link btn-card-details">View Details</button>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Project 8: LARAVEL-SEEDERS-LAB-8 -->
+                    <article class="project-card" data-category="web" data-id="LARAVEL-SEEDERS-LAB-8" tabindex="0">
+                        <div class="project-card-image">
+                            <div class="badge-stack">
+                                <span class="project-badge-pill">Database</span>
+                            </div>
+                            <div class="project-image-placeholder">SEEDERS LAB 8</div>
+                        </div>
+                        <div class="project-card-body">
+                            <h3 class="project-card-title">LARAVEL-SEEDERS-LAB-8</h3>
+                            <p class="project-card-desc">Laboratory module covering Laravel database migrations, model factories, and automated seeders for relational entities.</p>
+                            <div class="project-tool-tags">
+                                <span class="tool-tag">Laravel</span>
+                                <span class="tool-tag">Seeders</span>
+                                <span class="tool-tag">Blade</span>
+                            </div>
+                            <div class="project-card-actions">
+                                <a href="https://github.com/mdimco554902-a11y/LARAVEL-SEEDERS-LAB-8" target="_blank" rel="noopener noreferrer" class="btn-card-link" onclick="event.stopPropagation()">GitHub Repo</a>
+                                <button type="button" class="btn-card-link btn-card-details">View Details</button>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Project 9: dimco_blogapp -->
+                    <article class="project-card" data-category="web" data-id="dimco_blogapp" tabindex="0">
+                        <div class="project-card-image">
+                            <div class="badge-stack">
+                                <span class="project-badge-pill">Web App</span>
+                            </div>
+                            <div class="project-image-placeholder">BLOG APPLICATION</div>
+                        </div>
+                        <div class="project-card-body">
+                            <h3 class="project-card-title">dimco_blogapp</h3>
+                            <p class="project-card-desc">Dynamic blogging platform featuring post creation, category filters, responsive article layouts, and server-side rendering.</p>
+                            <div class="project-tool-tags">
+                                <span class="tool-tag">PHP</span>
+                                <span class="tool-tag">Laravel</span>
+                                <span class="tool-tag">Blade</span>
+                            </div>
+                            <div class="project-card-actions">
+                                <a href="https://github.com/mdimco554902-a11y/dimco_blogapp" target="_blank" rel="noopener noreferrer" class="btn-card-link" onclick="event.stopPropagation()">GitHub Repo</a>
+                                <button type="button" class="btn-card-link btn-card-details">View Details</button>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Project 10: laravel-lab-3-hr -->
+                    <article class="project-card" data-category="web" data-id="laravel-lab-3-hr" tabindex="0">
+                        <div class="project-card-image">
+                            <div class="badge-stack">
+                                <span class="project-badge-pill">Enterprise</span>
+                            </div>
+                            <div class="project-image-placeholder">HR MANAGEMENT</div>
+                        </div>
+                        <div class="project-card-body">
+                            <h3 class="project-card-title">laravel-lab-3-hr</h3>
+                            <p class="project-card-desc">Human resources and employee directory management system built with Laravel, model relationships, and Blade templates.</p>
+                            <div class="project-tool-tags">
+                                <span class="tool-tag">Laravel</span>
+                                <span class="tool-tag">PHP</span>
+                                <span class="tool-tag">Blade</span>
+                            </div>
+                            <div class="project-card-actions">
+                                <a href="https://github.com/mdimco554902-a11y/laravel-lab-3-hr" target="_blank" rel="noopener noreferrer" class="btn-card-link" onclick="event.stopPropagation()">GitHub Repo</a>
+                                <button type="button" class="btn-card-link btn-card-details">View Details</button>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Project 11: laravel-lab-activity-2 -->
+                    <article class="project-card" data-category="web" data-id="laravel-lab-activity-2" tabindex="0">
+                        <div class="project-card-image">
+                            <div class="badge-stack">
+                                <span class="project-badge-pill">Academic</span>
+                            </div>
+                            <div class="project-image-placeholder">LAB ACTIVITY 2</div>
+                        </div>
+                        <div class="project-card-body">
+                            <h3 class="project-card-title">laravel-lab-activity-2</h3>
+                            <p class="project-card-desc">Laboratory exercise implementing routing, controller logic, and Blade layouts in the Laravel ecosystem.</p>
+                            <div class="project-tool-tags">
+                                <span class="tool-tag">Laravel</span>
+                                <span class="tool-tag">Blade</span>
+                                <span class="tool-tag">PHP</span>
+                            </div>
+                            <div class="project-card-actions">
+                                <a href="https://github.com/mdimco554902-a11y/laravel-lab-activity-2" target="_blank" rel="noopener noreferrer" class="btn-card-link" onclick="event.stopPropagation()">GitHub Repo</a>
+                                <button type="button" class="btn-card-link btn-card-details">View Details</button>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Project 12: dimco_labexam1 -->
+                    <article class="project-card" data-category="web" data-id="dimco_labexam1" tabindex="0">
+                        <div class="project-card-image">
+                            <div class="badge-stack">
+                                <span class="project-badge-pill">Academic</span>
+                            </div>
+                            <div class="project-image-placeholder">LAB EXAM 1</div>
+                        </div>
+                        <div class="project-card-body">
+                            <h3 class="project-card-title">dimco_labexam1</h3>
+                            <p class="project-card-desc">Core web programming practical laboratory examination covering server-side scripting and data handling in PHP.</p>
+                            <div class="project-tool-tags">
+                                <span class="tool-tag">PHP</span>
+                                <span class="tool-tag">Server Scripts</span>
+                            </div>
+                            <div class="project-card-actions">
+                                <a href="https://github.com/mdimco554902-a11y/dimco_labexam1" target="_blank" rel="noopener noreferrer" class="btn-card-link" onclick="event.stopPropagation()">GitHub Repo</a>
+                                <button type="button" class="btn-card-link btn-card-details">View Details</button>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Project 13: Lab1 -->
+                    <article class="project-card" data-category="web" data-id="Lab1" tabindex="0">
+                        <div class="project-card-image">
+                            <div class="badge-stack">
+                                <span class="project-badge-pill">PHP Foundation</span>
+                            </div>
+                            <div class="project-image-placeholder">LAB 1 PHP</div>
+                        </div>
+                        <div class="project-card-body">
+                            <h3 class="project-card-title">Lab1</h3>
+                            <p class="project-card-desc">Foundational server-side programming lab exploring PHP syntax, conditional logic, and modular code structures.</p>
+                            <div class="project-tool-tags">
+                                <span class="tool-tag">PHP</span>
+                                <span class="tool-tag">Web Basics</span>
+                            </div>
+                            <div class="project-card-actions">
+                                <a href="https://github.com/mdimco554902-a11y/Lab1" target="_blank" rel="noopener noreferrer" class="btn-card-link" onclick="event.stopPropagation()">GitHub Repo</a>
+                                <button type="button" class="btn-card-link btn-card-details">View Details</button>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Project 14: m_dimco_portfolio_lab6 -->
+                    <article class="project-card" data-category="web" data-id="m_dimco_portfolio_lab6" tabindex="0">
+                        <div class="project-card-image">
+                            <div class="badge-stack">
+                                <span class="project-badge-pill">Web Design</span>
+                            </div>
+                            <div class="project-image-placeholder">PORTFOLIO LAB 6</div>
+                        </div>
+                        <div class="project-card-body">
+                            <h3 class="project-card-title">m_dimco_portfolio_lab6</h3>
+                            <p class="project-card-desc">Full stack portfolio development laboratory exploring semantic HTML5 structure, responsive viewports, and custom CSS styling.</p>
+                            <div class="project-tool-tags">
+                                <span class="tool-tag">HTML5</span>
+                                <span class="tool-tag">CSS3</span>
+                                <span class="tool-tag">Responsive</span>
+                            </div>
+                            <div class="project-card-actions">
+                                <a href="https://github.com/mdimco554902-a11y/m_dimco_portfolio_lab6" target="_blank" rel="noopener noreferrer" class="btn-card-link" onclick="event.stopPropagation()">GitHub Repo</a>
+                                <button type="button" class="btn-card-link btn-card-details">View Details</button>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Project 15: payroll-lab9 -->
+                    <article class="project-card" data-category="web" data-id="payroll-lab9" tabindex="0">
+                        <div class="project-card-image">
+                            <div class="badge-stack">
+                                <span class="project-badge-pill">Interactive</span>
+                            </div>
+                            <div class="project-image-placeholder">PAYROLL LAB 9</div>
+                        </div>
+                        <div class="project-card-body">
+                            <h3 class="project-card-title">payroll-lab9</h3>
+                            <p class="project-card-desc">Interactive payroll computation application utilizing client-side JavaScript for real-time deductions and salary calculations.</p>
+                            <div class="project-tool-tags">
+                                <span class="tool-tag">JavaScript</span>
+                                <span class="tool-tag">HTML</span>
+                                <span class="tool-tag">CSS</span>
+                            </div>
+                            <div class="project-card-actions">
+                                <a href="https://github.com/mdimco554902-a11y/payroll-lab9" target="_blank" rel="noopener noreferrer" class="btn-card-link" onclick="event.stopPropagation()">GitHub Repo</a>
+                                <button type="button" class="btn-card-link btn-card-details">View Details</button>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Project 16: DImco_DOM -->
+                    <article class="project-card" data-category="web" data-id="DImco_DOM" tabindex="0">
+                        <div class="project-card-image">
+                            <div class="badge-stack">
+                                <span class="project-badge-pill">DOM Lab</span>
+                            </div>
+                            <div class="project-image-placeholder">DIMCO DOM</div>
+                        </div>
+                        <div class="project-card-body">
+                            <h3 class="project-card-title">DImco_DOM</h3>
+                            <p class="project-card-desc">Hands-on Document Object Model exploration with interactive UI events and CSS styling dynamics.</p>
+                            <div class="project-tool-tags">
+                                <span class="tool-tag">CSS</span>
+                                <span class="tool-tag">JavaScript</span>
+                                <span class="tool-tag">HTML</span>
+                            </div>
+                            <div class="project-card-actions">
+                                <a href="https://github.com/mdimco554902-a11y/DImco_DOM" target="_blank" rel="noopener noreferrer" class="btn-card-link" onclick="event.stopPropagation()">GitHub Repo</a>
+                                <button type="button" class="btn-card-link btn-card-details">View Details</button>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Project 17: Simple-Login-Dashboard -->
+                    <article class="project-card" data-category="web" data-id="Simple-Login-Dashboard" tabindex="0">
+                        <div class="project-card-image">
+                            <div class="badge-stack">
+                                <span class="project-badge-pill">Portal</span>
+                            </div>
+                            <div class="project-image-placeholder">STUDENT PORTAL</div>
+                        </div>
+                        <div class="project-card-body">
+                            <h3 class="project-card-title">Simple-Login-Dashboard</h3>
+                            <p class="project-card-desc">Student Records Portal — responsive web application for managing student records, authenticating credentials, and dashboard navigation.</p>
+                            <div class="project-tool-tags">
+                                <span class="tool-tag">HTML</span>
+                                <span class="tool-tag">CSS</span>
+                                <span class="tool-tag">JavaScript</span>
+                            </div>
+                            <div class="project-card-actions">
+                                <a href="https://github.com/mdimco554902-a11y/Simple-Login-Dashboard" target="_blank" rel="noopener noreferrer" class="btn-card-link" onclick="event.stopPropagation()">GitHub Repo</a>
+                                <button type="button" class="btn-card-link btn-card-details">View Details</button>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Project 18: shs_registration_system -->
+                    <article class="project-card" data-category="web" data-id="shs_registration_system" tabindex="0">
+                        <div class="project-card-image">
+                            <div class="badge-stack">
+                                <span class="project-badge-pill">Python Web</span>
+                            </div>
+                            <div class="project-image-placeholder">SHS REGISTRATION</div>
+                        </div>
+                        <div class="project-card-body">
+                            <h3 class="project-card-title">shs_registration_system</h3>
+                            <p class="project-card-desc">Senior High School Student Registration System — responsive web application managing student enrollment and academic records.</p>
+                            <div class="project-tool-tags">
+                                <span class="tool-tag">Python</span>
+                                <span class="tool-tag">HTML</span>
+                                <span class="tool-tag">CSS</span>
+                            </div>
+                            <div class="project-card-actions">
+                                <a href="https://github.com/mdimco554902-a11y/shs_registration_system" target="_blank" rel="noopener noreferrer" class="btn-card-link" onclick="event.stopPropagation()">GitHub Repo</a>
+                                <button type="button" class="btn-card-link btn-card-details">View Details</button>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Project 19: Dimco_Biography -->
+                    <article class="project-card" data-category="web" data-id="Dimco_Biography" tabindex="0">
+                        <div class="project-card-image">
+                            <div class="badge-stack">
+                                <span class="project-badge-pill">Bio Page</span>
+                            </div>
+                            <div class="project-image-placeholder">DIMCO BIOGRAPHY</div>
+                        </div>
+                        <div class="project-card-body">
+                            <h3 class="project-card-title">Dimco_Biography</h3>
+                            <p class="project-card-desc">Interactive biographical portfolio showcasing developer origins, character traits, and creative interface experiments.</p>
+                            <div class="project-tool-tags">
+                                <span class="tool-tag">HTML5</span>
+                                <span class="tool-tag">CSS3</span>
+                                <span class="tool-tag">Creative UI</span>
+                            </div>
+                            <div class="project-card-actions">
+                                <a href="https://github.com/mdimco554902-a11y/Dimco_Biography" target="_blank" rel="noopener noreferrer" class="btn-card-link" onclick="event.stopPropagation()">GitHub Repo</a>
+                                <button type="button" class="btn-card-link btn-card-details">View Details</button>
+                            </div>
+                        </div>
+                    </article>
+
+                </div>
+
+                <!-- Footer Call to Action linking to GitHub -->
+                <div class="projects-footer-cta">
+                    <a href="https://github.com/mdimco554902-a11y" target="_blank" rel="noopener noreferrer" class="btn-primary" style="font-size: 1rem; padding: 15px 34px;">
+                        <span>View All on GitHub (mdimco554902-a11y)</span>
+                        <span aria-hidden="true">↗</span>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Project Detail Modal -->
+            <div class="modal-overlay" id="project-modal" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+                <div class="modal-content">
+                    <button class="modal-close-btn" id="modal-close-btn" type="button" aria-label="Close project modal">✕</button>
+                    <div class="modal-header">
+                        <span class="modal-badge" id="modal-badge">Project Type</span>
+                        <h3 class="modal-title" id="modal-title">Project Title</h3>
+                    </div>
+                    <p class="modal-desc" id="modal-desc">Project description...</p>
+                    
+                    <div id="modal-features-wrap" style="display: none;">
+                        <h4 class="modal-section-title">Key Features</h4>
+                        <div class="modal-features" id="modal-features"></div>
+                    </div>
+
+                    <div id="modal-screens-wrap" style="display: none;">
+                        <h4 class="modal-section-title">Screens &amp; Navigation</h4>
+                        <div class="modal-screens" id="modal-screens"></div>
+                    </div>
+
+                    <h4 class="modal-section-title">Tech Stack &amp; Tools</h4>
+                    <div class="modal-tags" id="modal-tags"></div>
+
+                    <div class="modal-links" id="modal-links">
+                        <a href="https://github.com/mdimco554902-a11y" target="_blank" rel="noopener noreferrer" class="btn-primary" id="modal-source-link">View Repository on GitHub</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Fern Divider -->
+        <div class="section-fern-divider" aria-hidden="true">
+            <div class="divider-line"></div>
+            <div class="divider-leaf">❀ 🌿 ❀</div>
+            <div class="divider-line"></div>
+        </div>
+
+        <!-- 6. SECTION 5: JOURNEY / EXPERIENCE & EDUCATION (Glowing Moss Trail at Sunset) -->
+        <section id="journey">
+            <div class="section-container">
+                <div class="section-header">
+                    <h2 class="section-heading">Journey and Milestones</h2>
+                    <div class="section-heading-underline"><span class="section-heading-leaf">🌿</span></div>
+                    <p class="section-lead">Milestones along the developer's journey — university studies at University of Mindanao, component architecture, testing, and continuous learning.</p>
+                </div>
+
+                <div class="timeline-wrap">
+                    <!-- Glowing Moss Vine Trail -->
+                    <div class="timeline-trail-line" aria-hidden="true"></div>
+
+                    <!-- Milestone 1: University of Mindanao (Left) -->
+                    <div class="timeline-item left fade-in-on-scroll">
+                        <div class="timeline-dot" aria-hidden="true"></div>
+                        <div class="timeline-card">
+                            <span class="timeline-date-gold">[PRESENT] UNIVERSITY DEGREE</span>
+                            <h3 class="timeline-card-title">University of Mindanao</h3>
+                            <p class="timeline-org">Academic Journey — Philippines</p>
+                            <p class="timeline-desc">Pursuing comprehensive studies in software engineering, full stack web technologies, and database architecture while actively developing open-source Flutter and web projects.</p>
+                        </div>
+                    </div>
+
+                    <!-- Milestone 2: 08:00 (Right) -->
+                    <div class="timeline-item right fade-in-on-scroll">
+                        <div class="timeline-dot" aria-hidden="true"></div>
+                        <div class="timeline-card">
+                            <span class="timeline-date-gold">[08:00] REPO SYNC &amp; PLANNING</span>
+                            <h3 class="timeline-card-title">Coffee Ingestion &amp; Terminal Repo Sync</h3>
+                            <p class="timeline-org">Developer Routine — Morning Preparation</p>
+                            <p class="timeline-desc">Synchronizing local repositories with remote branches, reviewing commit logs, and aligning daily engineering goals over morning coffee.</p>
+                        </div>
+                    </div>
+
+                    <!-- Milestone 3: 10:00 (Left) -->
+                    <div class="timeline-item left fade-in-on-scroll">
+                        <div class="timeline-dot" aria-hidden="true"></div>
+                        <div class="timeline-card">
+                            <span class="timeline-date-gold">[10:00] CORE DEVELOPMENT</span>
+                            <h3 class="timeline-card-title">Full Stack Architecture &amp; Component Engineering</h3>
+                            <p class="timeline-org">Deep Work Block — Modular Implementation</p>
+                            <p class="timeline-desc">Building accessible semantic structures, structuring modular CSS rulesets, and programming interactive Vanilla JavaScript application logic.</p>
+                        </div>
+                    </div>
+
+                    <!-- Milestone 4: 13:00 (Right) -->
+                    <div class="timeline-item right fade-in-on-scroll">
+                        <div class="timeline-dot" aria-hidden="true"></div>
+                        <div class="timeline-card">
+                            <span class="timeline-date-gold">[13:00] REFINEMENT &amp; TESTING</span>
+                            <h3 class="timeline-card-title">CSS Pixel Tweaking &amp; Responsive Viewport Testing</h3>
+                            <p class="timeline-org">Quality Assurance &amp; Polish</p>
+                            <p class="timeline-desc">Fine-tuning micro-interactions, verifying responsive layouts across mobile, tablet, and widescreen viewports, and auditing accessibility contrast.</p>
+                        </div>
+                    </div>
+
+                    <!-- Milestone 5: 16:00 (Left) -->
+                    <div class="timeline-item left fade-in-on-scroll">
+                        <div class="timeline-dot" aria-hidden="true"></div>
+                        <div class="timeline-card">
+                            <span class="timeline-date-gold">[16:00] SOUND &amp; INTERACTION</span>
+                            <h3 class="timeline-card-title">Sound Effect Synthesis &amp; Interactive Micro-States</h3>
+                            <p class="timeline-org">Web Audio API Engineering</p>
+                            <p class="timeline-desc">Synthesizing procedural audio chimes, tactile button depressions, and stateful hover responses without external audio dependencies.</p>
+                        </div>
+                    </div>
+
+                    <!-- Milestone 6: 19:00 (Right) -->
+                    <div class="timeline-item right fade-in-on-scroll">
+                        <div class="timeline-dot" aria-hidden="true"></div>
+                        <div class="timeline-card">
+                            <span class="timeline-date-gold">[19:00] COMMIT &amp; REST</span>
+                            <h3 class="timeline-card-title">Git Commit, Push to GitHub, &amp; Rest</h3>
+                            <p class="timeline-org">Evening Wrap-Up &amp; Inspiration</p>
+                            <p class="timeline-desc">Pushing clean, documented commits to GitHub, running regression sanity checks, and resting up for tomorrow's expeditions.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Fern Divider -->
+        <div class="section-fern-divider" aria-hidden="true">
+            <div class="divider-line"></div>
+            <div class="divider-leaf">❀ 🌿 ❀</div>
+            <div class="divider-line"></div>
+        </div>
+
+        <!-- 7. SECTION 6: CONTACT SECTION (Warm Parchment / Open Letter) -->
+        <section id="contact">
+            <div class="section-container">
+                <div class="section-header">
+                    <h2 class="section-heading">Contact Me</h2>
+                    <div class="section-heading-underline"><span class="section-heading-leaf">🌿</span></div>
+                    <p class="section-lead">Ready to start a project together, discuss full stack engineering opportunities, or connect? Send a letter or dispatch below.</p>
+                </div>
+
+                <div class="contact-grid">
+                    <!-- Left: Contact Details & Copy Email -->
+                    <div class="contact-info-col">
+                        <p class="contact-msg">Whether you have an inquiry about web development, want to discuss full stack engineering opportunities, or want to connect, my terminal channels are open.</p>
+
+                        <div class="contact-cards-stack">
+                            <!-- Email Card -->
+                            <div class="contact-card">
+                                <div class="contact-card-left">
+                                    <span class="contact-card-icon" aria-hidden="true">✉️</span>
+                                    <div class="contact-card-details">
+                                        <span class="contact-card-label">Email Address</span>
+                                        <a href="mailto:m.dimco.554902@umindanao.edu.ph" class="contact-card-val">m.dimco.554902@umindanao.edu.ph</a>
+                                    </div>
+                                </div>
+                                <button type="button" class="btn-copy-email" id="btn-copy-email">📋 Copy Email</button>
+                            </div>
+
+                            <!-- Location Card -->
+                            <div class="contact-card">
+                                <div class="contact-card-left">
+                                    <span class="contact-card-icon" aria-hidden="true">🧭</span>
+                                    <div class="contact-card-details">
+                                        <span class="contact-card-label">Location / School</span>
+                                        <span class="contact-card-val">University of Mindanao, Philippines</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- GitHub Card -->
+                            <div class="contact-card">
+                                <div class="contact-card-left">
+                                    <span class="contact-card-icon" aria-hidden="true">🐙</span>
+                                    <div class="contact-card-details">
+                                        <span class="contact-card-label">GitHub Profile</span>
+                                        <a href="https://github.com/mdimco554902-a11y" target="_blank" rel="noopener noreferrer" class="contact-card-val">github.com/mdimco554902-a11y</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Right: Working Contact Form -->
+                    <div class="contact-form-wrap">
+                        <form id="contact-form" class="contact-form" novalidate>
+                            <div class="form-group">
+                                <label for="contact-name" class="form-label">Your Name</label>
+                                <input type="text" id="contact-name" class="form-input" placeholder="e.g. Melchor" required>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="contact-email" class="form-label">Your Email</label>
+                                <input type="email" id="contact-email" class="form-input" placeholder="alex@domain.org" required>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="contact-subject" class="form-label">Subject</label>
+                                <input type="text" id="contact-subject" class="form-input" placeholder="Full Stack Project Collaboration" required>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="contact-message" class="form-label">Message</label>
+                                <textarea id="contact-message" class="form-textarea" placeholder="Hello Melchor! I would love to collaborate on a full stack web or mobile project..." required></textarea>
+                            </div>
+
+                            <button type="submit" class="btn-primary btn-submit-contact">
+                                <span>✦ Send Message Dispatch ✦</span>
+                            </button>
+                        </form>
+
+                        <!-- Live Terminal Status Log -->
+                        <div id="terminal-log" class="terminal-dispatch-log" aria-live="polite">
+                            <div class="terminal-line"><span style="color: var(--c-moss-green);">✦</span> STATUS: Forest Transceiver Standby</div>
+                            <div class="terminal-line"><span style="color: var(--c-moss-green);">✦</span> Ready to relay dispatch to Melchor Y. Dimco</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- 8. FOOTER (Calm Night Forest with Glowing Fireflies) -->
+    <footer class="site-footer">
+        <div class="footer-fireflies-backdrop" aria-hidden="true"></div>
+
+        <div class="section-container">
+            <div class="footer-columns">
+                <!-- Col 1: Wordmark & Motto -->
+                <div class="footer-col">
+                    <span class="footer-title">Melchor Y. Dimco</span>
+                    <p class="footer-tagline">"Not in a rush — just keep walking, keep learning."</p>
+                    <div class="footer-social-links">
+                        <a href="https://github.com/mdimco554902-a11y" target="_blank" rel="noopener noreferrer" class="social-icon-btn" aria-label="GitHub Profile">
+                            GH
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Col 2: Quick Links -->
+                <div class="footer-col">
+                    <span class="footer-title">Quick Links</span>
+                    <ul class="footer-nav-list">
+                        <li><a href="#hero">Home</a></li>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#skills">Skills</a></li>
+                        <li><a href="#projects">Projects</a></li>
+                        <li><a href="#journey">Journey</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+
+                <!-- Col 3: Direct Contact -->
+                <div class="footer-col">
+                    <span class="footer-title">Contact Details</span>
+                    <div class="footer-contact-details">
+                        <span>Email: <a href="mailto:m.dimco.554902@umindanao.edu.ph">m.dimco.554902@umindanao.edu.ph</a></span>
+                        <span>Location: Philippines</span>
+                        <span>University: University of Mindanao</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Bottom Bar: Copyright & Back to Top -->
+            <div class="footer-bottom-bar">
+                <p class="footer-copyright">© 2026 Melchor Y. Dimco. All Rights Reserved.</p>
+                <button type="button" class="btn-back-to-top" id="btn-back-to-top" aria-label="Back to top">↑ Back to Top</button>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Toast Notification for Copy-Email & Actions -->
+    <div id="toast-notification" role="status" aria-live="polite"></div>
+
+    <!-- Scripts: Web Audio Synthesizer followed by Main Interactions -->
+    <script src="js/sfx.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
