@@ -711,5 +711,73 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
+    // 15. INTERACTIVE PROFILE PORTRAIT HOVER MAGIC (3D Parallax Tilt & Mana Sparkles)
+    const profileFrames = document.querySelectorAll('.hero-photo-frame, .about-photo-frame');
+
+    profileFrames.forEach(frame => {
+        let isHovered = false;
+
+        // Subtle floating golden mana sparkles on mouse enter
+        frame.addEventListener('mouseenter', () => {
+            isHovered = true;
+            if (typeof window.playHoverSFX === 'function') {
+                window.playHoverSFX();
+            }
+
+            const sparkSymbols = ['✨', '⭐', '🌱', '❀'];
+            const rect = frame.getBoundingClientRect();
+
+            for (let i = 0; i < 4; i++) {
+                const spark = document.createElement('span');
+                spark.className = 'photo-mana-sparkle';
+                spark.textContent = sparkSymbols[Math.floor(Math.random() * sparkSymbols.length)];
+
+                // Position around the border
+                const edgeX = (i % 2 === 0 ? 0.2 : 0.8) * rect.width + (Math.random() * 20 - 10);
+                const edgeY = (i < 2 ? 0.2 : 0.8) * rect.height + (Math.random() * 20 - 10);
+                const tx = (Math.random() - 0.5) * 40;
+                const ty = -(Math.random() * 30 + 15);
+                const txEnd = tx + (Math.random() - 0.5) * 50;
+                const tyEnd = ty - (Math.random() * 40 + 20);
+
+                spark.style.left = `${edgeX}px`;
+                spark.style.top = `${edgeY}px`;
+                spark.style.setProperty('--tx', `${tx}px`);
+                spark.style.setProperty('--ty', `${ty}px`);
+                spark.style.setProperty('--tx-end', `${txEnd}px`);
+                spark.style.setProperty('--ty-end', `${tyEnd}px`);
+                spark.style.animationDelay = `${i * 0.1}s`;
+
+                frame.appendChild(spark);
+
+                setTimeout(() => {
+                    if (spark.parentNode) {
+                        spark.parentNode.removeChild(spark);
+                    }
+                }, 1500);
+            }
+        });
+
+        // 3D Tilt interaction on mouse move
+        frame.addEventListener('mousemove', (e) => {
+            if (!isHovered) return;
+            const rect = frame.getBoundingClientRect();
+            const x = e.clientX - rect.left;
+            const y = e.clientY - rect.top;
+            const centerX = rect.width / 2;
+            const centerY = rect.height / 2;
+            const rotateX = ((y - centerY) / centerY) * -6; // max 6 deg
+            const rotateY = ((x - centerX) / centerX) * 6;  // max 6 deg
+
+            frame.style.transform = `perspective(700px) translateY(-8px) scale(1.03) rotateX(${rotateX.toFixed(2)}deg) rotateY(${rotateY.toFixed(2)}deg)`;
+        });
+
+        // Smooth reset on mouse leave
+        frame.addEventListener('mouseleave', () => {
+            isHovered = false;
+            frame.style.transform = '';
+        });
+    });
+
     console.log('[PORTFOLIO ONLINE] Melchor Y. Dimco — Green Forest Frieren Portfolio Ready.');
 });
