@@ -1,11 +1,3 @@
-<h1 align="center">Dimco Portfolio</h1>
-
-<p align="center">Personal portfolio website of Melchor Y. Dimco — Full Stack Developer from the Philippines.</p>
-
-<p align="center"><i>Not in a rush — just keep walking, keep learning.</i></p>
-
----
-
 ## About Me
 
 - **Name:** Melchor Y. Dimco
