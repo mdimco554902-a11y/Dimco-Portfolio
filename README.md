@@ -1,13 +1,15 @@
-# Dimco Portfolio
+<h1 align="center">Dimco Portfolio</h1>
 
-Personal portfolio website of **Melchor Y. Dimco** — Frontend Developer from the Philippines.
+<p align="center">Personal portfolio website of Melchor Y. Dimco — Full Stack Developer from the Philippines.</p>
 
-> Not in a rush — just keep walking, keep learning.
+<p align="center"><i>Not in a rush — just keep walking, keep learning.</i></p>
+
+---
 
 ## About Me
 
 - **Name:** Melchor Y. Dimco
-- **Role:** Frontend Developer
+- **Role:** Full Stack Developer
 - **Location:** Philippines
 - **Currently at:** University of Mindanao
 - **Currently learning:** Python
@@ -77,13 +79,13 @@ Track calories, scale portions in grams, balance protein, carbs, and fats, and w
 
 ### More Works
 
-See all of my projects on GitHub:
-
-**https://github.com/mdimco554902-a11y**
+See all of my projects on GitHub: https://github.com/mdimco554902-a11y
 
 ## Design
 
-This portfolio uses a green, forest-like, Frieren-inspired theme:
+This README uses a dark minimalist style, to match my GitHub profile.
+
+The portfolio site itself uses a green, forest-like theme:
 
 - Deep forest, moss, and sage greens
 - Warm cream and parchment backgrounds
@@ -96,7 +98,16 @@ The theme is visual style and atmosphere only. The portfolio itself is about me 
 
 ## Tools I Use
 
-VS Code • GitHub • Dart • HTML • CSS • Figma • Firebase • Python (learning)
+<p align="center">
+  <img src="https://img.shields.io/badge/VS_Code-111111?style=flat-square&logo=visualstudiocode&logoColor=white" alt="VS Code" />
+  <img src="https://img.shields.io/badge/GitHub-111111?style=flat-square&logo=github&logoColor=white" alt="GitHub" />
+  <img src="https://img.shields.io/badge/Dart-111111?style=flat-square&logo=dart&logoColor=white" alt="Dart" />
+  <img src="https://img.shields.io/badge/HTML5-111111?style=flat-square&logo=html5&logoColor=white" alt="HTML5" />
+  <img src="https://img.shields.io/badge/CSS3-111111?style=flat-square&logo=css3&logoColor=white" alt="CSS3" />
+  <img src="https://img.shields.io/badge/Figma-111111?style=flat-square&logo=figma&logoColor=white" alt="Figma" />
+  <img src="https://img.shields.io/badge/Firebase-111111?style=flat-square&logo=firebase&logoColor=white" alt="Firebase" />
+  <img src="https://img.shields.io/badge/Python-111111?style=flat-square&logo=python&logoColor=white" alt="Python — learning" />
+</p>
 
 ## How to View This Portfolio Locally
 
